@@ -3,10 +3,10 @@
 #include <time.h>
 
 /**
- * main - Prints base 10 numbers
+ * main - Prints base 16
  * @void: Empty parameter list for main.
  *
- * Description: Prints numbers 0-9
+ * Description: Prints all hexadecimals
  *
  * Return: 0 for success
 */

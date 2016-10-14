@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * main - Prints 00 - 99
+ * main - Writes 00 - 99
  * @void: Empty parameter list for main.
  *
- * Description: Prints number 00-99 with only 5x putchar functions
+ * Description: Writes number 00-99 with only 5x putchar functions
  * Can only use putchar
  *
  * Return: 0 for success

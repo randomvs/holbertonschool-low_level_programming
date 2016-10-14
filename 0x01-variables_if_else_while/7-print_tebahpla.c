@@ -6,19 +6,19 @@
  * main - Prints alphabet
  * @void: Empty parameter list for main.
  *
- * Description: Prints the alphabet in lower case
+ * Description: Prints the alphabet in reverse order
  * Can only use putchar
  *
  * Return: 0 for success
 */
 int main(void)
 {
-	char letter = 'a';
+	char letter = 'z';
 
-	while (letter <= 'z')
+	while (letter >= 'a')
 	{
 		putchar(letter);
-		letter++;
+		letter--;
 	}
 	putchar('\n');
 	return (0);

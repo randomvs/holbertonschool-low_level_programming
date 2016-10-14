@@ -4,8 +4,7 @@
  * main - Writes 00 - 99
  * @void: Empty parameter list for main.
  *
- * Description: Writes number 00-99 with only 5x putchar functions
- * Can only use putchar
+ * Description: Writes number 00-99
  *
  * Return: 0 for success
 */

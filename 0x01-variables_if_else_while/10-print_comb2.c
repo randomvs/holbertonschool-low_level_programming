@@ -21,11 +21,11 @@ int main(void)
 			putchar(j);
 			if (i + j < 114)
 			{
-				putchar(',');
-				putchar(' ');
+				putchar(44);
+				putchar(32);
 			}
 		}
 	}
-	putchar('\n');
+	putchar(10);
 	return (0);
 }

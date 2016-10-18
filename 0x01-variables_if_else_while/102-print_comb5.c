@@ -36,11 +36,12 @@ int main(void)
 						putchar(' ');
 						putchar(k);
 						putchar(l);
-					}
-					if (((ival + jval) != 98) || ((kval + lval) != 99))
-					{
-						putchar(',');
-						putchar(' ');
+
+						if (((ival + jval) != 98) || ((kval + lval) != 99))
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
 				}
 			}

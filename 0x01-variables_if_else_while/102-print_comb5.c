@@ -11,38 +11,24 @@
 */
 int main(void)
 {
-	int i, j, k, l, ival, jval, kval, lval;
+	int i, j;
 
-	for (i = '0'; i <= '9'; i++)
+	for (i = 0; i <= 99; i++)
 	{
-		ival = (i - '0') * 10;
-
-		for (j = '0'; j <= '9'; j++)
+		for (j = 0; j <= 99; j++)
 		{
-			jval = j - '0';
-
-			for (k = '0'; k <= '9'; k++)
+			if (i < j && i % 10 < j % 10)
 			{
-				kval = (k - '0') * 10;
+				putchar((i / 10) + '0');
+				putchar((i % 10) + '0');
+				putchar(' ');
+				putchar((j / 10) + '0');
+				putchar((j % 10) + '0');
 
-				for (l = '0'; l <= '9'; l++)
+				if (i != 98 || j != 99)
 				{
-					lval = l - '0';
-
-					if ((ival + jval) < (kval + lval))
-					{
-						putchar(i);
-						putchar(j);
-						putchar(' ');
-						putchar(k);
-						putchar(l);
-
-						if (((ival + jval) != 98) || ((kval + lval) != 99))
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}

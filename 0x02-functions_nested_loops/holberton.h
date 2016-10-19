@@ -8,7 +8,7 @@
  * _isalpha - return 1 if c is upper or lowercase, 0 otherwise
  * print_sign - return 1 for positive, 0 for 0, and -1 for negative
  * _abs - computes absolute value of integer
- *
+ * print_last_digit - print last digit
  **/
 int _putchar(char);
 void print_alphabet(void);
@@ -17,3 +17,4 @@ int _islower(int);
 int _isalpha(int);
 int print_sign(int);
 int _abs(int);
+int print_last_digit(int);

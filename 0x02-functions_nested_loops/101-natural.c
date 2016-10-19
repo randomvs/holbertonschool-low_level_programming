@@ -11,7 +11,7 @@
  *
  **/
 
-void main(void)
+int main(void)
 {
 	int sum, i;
 
@@ -20,5 +20,6 @@ void main(void)
 		if ((i % 3 == 0) || (i % 5 == 0))
 			sum++;
 	}
-		printf("%d\n", sum);
+	printf("%d\n", sum);
+	return (0);
 }

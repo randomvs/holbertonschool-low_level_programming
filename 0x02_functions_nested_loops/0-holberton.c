@@ -1,37 +1,24 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <time.h>
+#include "holberton.h"
 
 /**
- * main - Prints alphabet
+ * main - Prints Holberton
  * @void: Empty parameter list for main.
  *
- * Description: Prints the alphabet in lower case
- * Skip q and e
- * Can only use putchar
+ * Description: Prints Holberton w/out stdio
  *
  * Return: 0 for success
 */
 int main(void)
 {
-	char letter = 'a';
-
-	while (letter <= 'z')
-	{
-		if (letter == 'q')
-		{
-			letter++;
-		}
-		else if (letter == 'e')
-		{
-			letter++;
-		}
-		else
-		{
-			putchar(letter);
-			letter++;
-		}
-	}
-	putchar('\n');
+	_putchar('H');
+	_putchar('o');
+	_putchar('l');
+	_putchar('b');
+	_putchar('e');
+	_putchar('r');
+	_putchar('t');
+	_putchar('o');
+	_putchar('n');
+	_putchar('\n');
 	return (0);
 }

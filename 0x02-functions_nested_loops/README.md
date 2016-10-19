@@ -1,14 +1,16 @@
 0. _putchar mandatory
 Write a program that prints Holberton, followed by a new line.
 The program should return 0
-1. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game mandatory
+1. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I
+call the alphabet game mandatory
 Score: 0.00% (completion score: 0.00%)
 Write a function that prints the alphabet, in lowercase, followed by a new line.
 Prototype: void print_alphabet(void);
 You can only use _putchar twice in your code
 2. 10 x alphabet mandatory
 Score: 0.00% (completion score: 0.00%)
-Write a function that prints 10 times the alphabet, in lowercase, followed by a new line.
+Write a function that prints 10 times the alphabet, in lowercase, followed by a
+new line.
 Prototype: void print_alphabet(void);
 You can only use _putchar twice in your code
 3. islower mandatory
@@ -17,14 +19,16 @@ Write a function that checks for lowercase character.
 Prototype: int _islower(int c);
 Returns 1 if c is lowercase
 Returns 0 otherwise
-FYI: The standard library provides a similar function: islower. Run man islower to learn more.
+FYI: The standard library provides a similar function: islower. Run man islower
+to learn more.
 4. isalpha mandatory
 Score: 0.00% (completion score: 0.00%)
 Write a function that checks for alphabetic characters
 Prototype: int _isalpha(int c);
 Returns 1 if c is a letter, lowercase or uppercase
 Returns 0 otherwise
-FYI: The standard library provides a similar function: isalpha. Run man isalpha to learn more.
+FYI: The standard library provides a similar function: isalpha. Run man isalpha
+to learn more.
 5. Sign mandatory
 Score: 0.00% (completion score: 0.00%)
 Write a function that prints the sign of a number.
@@ -32,19 +36,25 @@ Prototype: int print_sign(int n);
 Returns 1 and prints + if n is greater than zero
 Returns 0 and prints 0 if n is zero
 Returns -1 and prints - if n is less than zero
-6. There is no such thing as absolute value in this world. You can only estimate what a thing is worth to you mandatory
+6. There is no such thing as absolute value in this world. You can only estimate
+what a thing is worth to you mandatory
 Score: 0.00% (completion score: 0.00%)
 Write a function that computes the absolute value of an integer.
 Prototype: int _abs(int);
-FYI: The standard library provides a similar function: abs. Run man abs to learn more.
-6. There is no such thing as absolute value in this world. You can only estimate what a thing is worth to you mandatory
+FYI: The standard library provides a similar function: abs. Run man abs to learn
+more.
+6. There is no such thing as absolute value in this world. You can only estimate
+what a thing is worth to you mandatory
 Score: 0.00% (completion score: 0.00%)
 Write a function that computes the absolute value of an integer.
 Prototype: int _abs(int);
-FYI: The standard library provides a similar function: abs. Run man abs to learn more.
-8. I'm federal agent Jack Bauer, and today is the longest day of my life mandatory
+FYI: The standard library provides a similar function: abs. Run man abs to learn
+more.
+8. I'm federal agent Jack Bauer, and today is the longest day of my life
+mandatory
 Score: 0.00% (completion score: 0.00%)
-Write a function that prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.
+Write a function that prints every minute of the day of Jack Bauer, starting
+from 00:00 to 23:59.
 Prototype: void jack_bauer(void);
 You can listen to this soundtrack while coding :)
 9. Learn your times table mandatory
@@ -55,10 +65,47 @@ Format: see example
 10. a + b
 11. Holberton School, 98 Battery Street, San Francisco CA 94111 mandatory
 Score: 0.00% (completion score: 0.00%)
-Write a function that prints all natural numbers from n to 98, followed by a new line.
+Write a function that prints all natural numbers from n to 98, followed by a new
+line.
 Prototype: void print_to_98(int n);
 Numbers must be separated by a coma, followed by a space
 Numbers should be printed in order
 The first printed number should be the number passed to your function
 The last printed number should be 98
 You are allowed to use the standard library
+12. The World looks like a multiplication-table, or a mathematical equation,
+which, turn it how you will, balances itself #advanced
+Write a function that prints the n times table, starting with 0.
+Prototype: void print_times_table(int n)
+If n is greater than 15 or less than 0 the function should not print anything
+13. Nature made the natural numbers; All else is the work of women #advanced
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get
+3, 5, 6 and 9. The sum of these multiples is 23. Write a program that computes
+and prints the sum of all the multiples of 3 or 5 below 1024 (excluded),
+followed by a new line.
+You are allowed to use the standard library
+14. In computer class, the first assignment was to write a program to print the
+first 100 Fibonacci numbers. Instead, I wrote a program that would steal
+passwords of students. My teacher gave me an A #advanced
+Write a program that prints the first 50 Fibonacci numbers, starting with 1 and
+2, followed by a new line.
+The numbers must be separated by coma, followed by a space ,
+You are allowed to use the standard library
+15. Even Liber Abbaci #advanced
+Each new term in the Fibonacci sequence is generated by adding the previous two
+terms. By starting with 1 and 2, the first 10 terms will be: 1, 2, 3, 5, 8, 13,
+21, 34, 55, 89. By considering the terms in the Fibonacci sequence whose values
+do not exceed 4,000,000, write a program that finds and prints the sum of the
+even-valued terms, followed by a new line.
+You are allowed to use the standard library
+16. In computer class, the first assignment was to write a program to print the
+first 100 Fibonacci numbers. Instead, I wrote a program that would steal
+passwords of students. My teacher gave me an A+ #advanced
+Write a program that finds and prints the first 98 Fibonacci numbers, starting
+with 1 and 2, followed by a new line.
+The numbers should be separated by coma, followed by a space ,
+You are allowed to use the standard library
+You are not allowed to use any other library (You can't use GMP etc...)
+You are not allowed to use long long, malloc, pointers, arrays/tables, or
+structures
+You are not allowed to hard code any number (except for 1 and 2)

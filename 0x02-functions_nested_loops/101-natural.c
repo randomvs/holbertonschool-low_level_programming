@@ -9,6 +9,8 @@
  * Description: prints the sum of all multiples of 3 and 5
  * up to but not including 1024
  *
+ * Return: return 0
+ *
  **/
 
 int main(void)

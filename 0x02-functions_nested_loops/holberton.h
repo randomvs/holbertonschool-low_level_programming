@@ -10,6 +10,7 @@
  * _abs - computes absolute value of integer
  * print_last_digit - print last digit
  * add - add two ints, return sum
+ * jack_bauer - prints all minutes of the day
  *
  **/
 int _putchar(char);
@@ -21,3 +22,4 @@ int print_sign(int);
 int _abs(int);
 int print_last_digit(int);
 int add(int, int);
+void jack_bauer(void);

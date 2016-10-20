@@ -15,6 +15,12 @@
  * print_to_98 - prints all natural numbers to 98
  * print_times_table - print times table up to
  * _isupper - checks if char is capital letter
+ * _isdigit - checks if int is a digit 0-9
+ * mul - multiply two numbers
+ *
+ *
+ *
+ *
  **/
 int _putchar(char);
 void print_alphabet(void);
@@ -30,3 +36,5 @@ void times_table(void);
 void print_to_98(int);
 void print_times_table(int n);
 int _isupper(int);
+int _isdigit(int);
+int mul(int, int);

@@ -18,7 +18,7 @@
  * _isdigit - checks if int is a digit 0-9
  * mul - multiply two numbers
  * print_void - print numbers 0-9
- *
+ * print_most_numbers - print 0-9 w/out 2 and 4
  *
  *
  **/
@@ -39,3 +39,4 @@ int _isupper(int);
 int _isdigit(int);
 int mul(int, int);
 void print_numbers(void);
+void print_most_numbers(void);

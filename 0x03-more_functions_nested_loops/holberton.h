@@ -22,6 +22,9 @@
  * more_numbers - print 0-14 ten times
  * print int using only putchar
  * print a line of n length
+ * print a diagonal line of n length
+ *
+ *
  *
  *
  *
@@ -47,3 +50,4 @@ void print_most_numbers(void);
 void more_numbers(void);
 void print_number(int);
 void print_line(int);
+void print_diagonal(int);

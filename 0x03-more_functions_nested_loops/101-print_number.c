@@ -24,6 +24,8 @@ int exponent(int x, int y)
 
 	power = x;
 
+	if (x == 0)
+		return (0);
 	if (y == 0)
 		return (1);
 

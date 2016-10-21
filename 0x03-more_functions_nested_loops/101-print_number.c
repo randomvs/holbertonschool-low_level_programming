@@ -38,30 +38,34 @@ int exponent(int x, int y)
 
 void print_number(int number)
 {
-	int size, counter, digit;
+	int size, digit;
+	long counter, sign;
 
+	sign = 1;
 	digit = 0;
 	size = 1;
+	counter = number;
 
 	if (number < 0)
 	{
 		_putchar('-');
-		number = number * -1;
+		sign = -1;
+		counter *= sign;
 	}
 
-	for (counter = number; counter >= 10; size++)
+	for (; counter >= 10; size++)
 	{
 		counter = counter / 10;
 	}
 
-	counter = number;
+	counter = sign * (long)number;
 
 	while (size >= 2)
 	{
-		digit = counter / exponent(10, size - 1);
+		digit = (counter / exponent(10, size - 1));
 		_putchar(digit + '0');
 		counter = counter % exponent(10, size - 1);
 		size--;
 	}
-	_putchar(number % 10 + '0');
+	_putchar(counter % 10 + '0');
 }

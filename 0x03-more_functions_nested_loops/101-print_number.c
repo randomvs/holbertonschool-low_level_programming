@@ -1,13 +1,5 @@
 #include <stdio.h>
-#include <math.h>
 #include "holberton.h"
-
-/**
- * print_number - print an int using only _putchar
- * number: int to be printed by function
- *
- * Return: nothing
- **/
 
 /**
  * exponent - x to the power of y
@@ -36,6 +28,13 @@ int exponent(int x, int y)
 	}
 	return (power);
 }
+
+/**
+ * print_number - print an int using only _putchar
+ * @number: int to be printed by function
+ *
+ * Return: nothing
+ **/
 
 void print_number(int number)
 {

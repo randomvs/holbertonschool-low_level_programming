@@ -25,7 +25,7 @@
  * print a diagonal line of n length
  * print a square of n size
  * print a triangle of n size
- *
+ * reset_to_98 - takes pointer int and update the value to 98
  *
  *
  **/
@@ -53,3 +53,4 @@ void print_line(int);
 void print_diagonal(int);
 void print_square(int);
 void print_triangle(int);
+void reset_to_98(int *n);

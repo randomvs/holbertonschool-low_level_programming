@@ -1,12 +1,11 @@
 #include "holberton.h"
 
 /**
- * _memcpy - copies memory area
- * @dest: memory destination
- * @src: memory source
- * @n: bytes to copy to dest
- * Description: copies n values from src to dest
- * Return: pointer to memory
+ * _strchr - locates a character in a string
+ * @src: source string
+ * @c: character to search for
+ * Description: searches string for character, returns pointer to char
+ * Return: pointer to char
  **/
 
 char *_strchr(char *src, char c)

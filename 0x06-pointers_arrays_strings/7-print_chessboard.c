@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * print_chessboard -
- * @a:
- * Description:
+ * print_chessboard - print chessboard
+ * @a: array of board with values
+ * Description: uses input a to print a chessboard
  * Return: nothing
  **/
 

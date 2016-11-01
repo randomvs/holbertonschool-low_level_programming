@@ -32,18 +32,15 @@ int compare(char *haystack, char *needle)
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
+	int j;
 
-	for (i = 0; needle[i] != '\0'; i++)
+	for (j = 0; haystack[j] != '\0'; j++)
 	{
-		for (j = 0; haystack[j] != '\0'; j++)
+		if (needle[0] == haystack[j])
 		{
-			if (needle[i] == haystack[j])
-			{
-				if (compare(&haystack[j], needle) == 1)
-					return (&haystack[j]);
-			}
+			if (compare(&haystack[j], needle) == 1)
+				return (&haystack[j]);
 		}
 	}
-	return ('\0');
+	return (NULL);
 }

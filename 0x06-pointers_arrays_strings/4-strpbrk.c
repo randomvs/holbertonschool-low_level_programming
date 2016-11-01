@@ -5,30 +5,22 @@
  * @s: string to search
  * @accept: set of bytes to search for
  * Description: retruns first occurrence in a string
- * Return: pointer to first instance ofr NULL
- **/
+ * Return: pointer to first instance of string
+**/
 
 char *_strpbrk(char *s, char *accept)
 {
-	int i, j, c, exit;
+	int i, j;
 
-	exit = 0;
-	c = -1;
-
-	for (i = 0; accept[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; s[j] != '\0' && exit == 0; j++)
+		for (j = 0; accept[j] != '\0'; j++)
 		{
-			if (accept[i] == s[j])
+			if (accept[j] == s[i])
 			{
-				exit = 1;
-				if (j < c)
-					c = j;
+				return (&s[i]);
 			}
 		}
-		exit = 0;
 	}
-	if (c == -1)
-		return ('\0');
-	return (&s[c]);
+	return (NULL);
 }

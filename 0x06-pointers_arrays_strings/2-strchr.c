@@ -14,7 +14,9 @@ char *_strchr(char *src, char c)
 	int i;
 
 	if (src == NULL)
-	  return (NULL);
+	{
+		return (NULL);
+	}
 
 	for (i = 0; src[i] != '\0'; i++)
 	{

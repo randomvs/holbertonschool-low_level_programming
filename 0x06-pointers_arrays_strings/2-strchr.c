@@ -21,9 +21,5 @@ char *_strchr(char *src, char c)
 			return (start);
 		}
 	}
-
-	if (src[i] == '\0')
-		start = '\0';
-
-	return (start);
+	return (NULL);
 }

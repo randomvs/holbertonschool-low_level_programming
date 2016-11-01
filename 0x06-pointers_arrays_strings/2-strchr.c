@@ -10,7 +10,6 @@
 
 char *_strchr(char *src, char c)
 {
-	char *start;
 	int i;
 
 	if (src == NULL)
@@ -22,10 +21,14 @@ char *_strchr(char *src, char c)
 	{
 		if (src[i] == c)
 		{
-			start = &src[i];
-			return (start);
+			return (&src[i]);
 		}
 
+	}
+
+	if (src[i] == c)
+	{
+		return (&src[i]);
 	}
 	return (NULL);
 }

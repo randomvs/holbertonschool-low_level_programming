@@ -13,6 +13,9 @@ char *_strchr(char *src, char c)
 	char *start;
 	int i;
 
+	if (src == NULL)
+	  return (NULL);
+
 	for (i = 0; src[i] != '\0'; i++)
 	{
 		if (src[i] == c)
@@ -20,6 +23,7 @@ char *_strchr(char *src, char c)
 			start = &src[i];
 			return (start);
 		}
+
 	}
 	return (NULL);
 }

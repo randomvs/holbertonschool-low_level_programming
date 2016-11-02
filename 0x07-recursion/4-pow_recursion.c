@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- * compare - compares two strings
- * @haystack: source string
- * @needle: string being compared
- * Description: checks if needle is at start of haystack
- * Return: 1 if matches, 0 if not
+ * _pow_recursion - find x^y
+ * @x: base number
+ * @y: power of
+ * Description: find x^y using factorial
+ * Return: x^y, -1 if y is negative
  **/
 int _pow_recursion(int x, int y)
 {

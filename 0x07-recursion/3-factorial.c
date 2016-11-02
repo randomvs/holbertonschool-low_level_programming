@@ -1,11 +1,10 @@
 #include "holberton.h"
 
 /**
- * compare - compares two strings
- * @haystack: source string
- * @needle: string being compared
- * Description: checks if needle is at start of haystack
- * Return: 1 if matches, 0 if not
+ * factorial - find factorial n
+ * @n: given number
+ * Description: find factorial of n using recursion
+ * Return: factorial of n
  **/
 int factorial(int n)
 {

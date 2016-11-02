@@ -1,11 +1,10 @@
 #include "holberton.h"
 
 /**
- * compare - compares two strings
- * @haystack: source string
- * @needle: string being compared
- * Description: checks if needle is at start of haystack
- * Return: 1 if matches, 0 if not
+ * _print_rev_recursion - print string in reverse
+ * @s: string to print
+ * Description: print string in reverse
+ * Return: nothing
  **/
 
 void _print_rev_recursion(char *s)

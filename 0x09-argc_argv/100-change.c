@@ -38,5 +38,5 @@ int main(int argc, char *argv[])
 	change = change % 2;
 	coins += change;
 	printf("%d\n", coins);
-	return (0);
+	return (1);
 }

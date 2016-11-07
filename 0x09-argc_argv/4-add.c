@@ -12,8 +12,8 @@
 int main(int argc, char **argv)
 {
 	int sum, i;
-	sum = 0;
 
+	sum = 0;
 	for (i = 1; i < argc; i++)
 	{
 		if (atoi(argv[i]) == 0)

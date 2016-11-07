@@ -1,5 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
+#include <stdlib.h>
+
 /**
  * main - find least amount of coins needed for change
  * @argc: number of parameters entered
@@ -9,7 +11,7 @@
  **/
 int main(int argc, char *argv[])
 {
-	int change, i, coins;
+	int change, coins;
 	char *input = argv[1];
 
 	change = coins = 0;
@@ -19,15 +21,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	for (i = 0; input[i] != '\0'; i++)
-	{
-		if (input[i] < '0' || input[i] > '9')
-		{
-			printf("Error\n");
-			return (1);
-		}
-		change = change * 10 + (input[i] - '0');
-	}
+
+	change = atoi(input);
+
 	coins = change / 25;
 	change = change % 25;
 	coins = coins + change / 10;

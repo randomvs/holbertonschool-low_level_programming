@@ -31,8 +31,7 @@ int numchecker(char *s)
 
 int main(int argc, char *argv[])
 {
-	unsigned int change;
-	int coins;
+	int change, coins;
 	char *input = argv[1];
 
 	change = coins = 0;
@@ -42,12 +41,23 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	if (numchecker(argv[1]) == 0)
+
+	change = atoi(input);
+
+	if (change >= 0 && numchecker(input) == 0)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	change = atoi(input);
+	if (change < 0 && numchecker(&input[1]) == 0)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	if (change < 0)
+	{
+		change = 0;
+	}
 	coins = change / 25;
 	change = change % 25;
 	coins = coins + change / 10;

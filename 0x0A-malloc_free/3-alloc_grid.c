@@ -3,12 +3,11 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - create a two demensional array
+ * alloc_grid - create a 2d array of ints
  * @width: width of grid
  * @height: height of grid
  * Description: creat a grid, initialize to 0
- * Return: pointer to string, NULL if fails
- *
+ * Return: 2d array, NULL if fail
  **/
 int **alloc_grid(int width, int height)
 {
@@ -19,6 +18,9 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 
 	grid = (int **)malloc(height * sizeof(int *));
+
+	if (grid == null)
+		return (NULL);
 
 	for (x = 0; x < height; x++)
 	{

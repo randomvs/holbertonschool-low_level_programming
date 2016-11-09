@@ -11,11 +11,9 @@ int _strlen(char *s)
 {
 	int i;
 
-	if (s[0] == '\0')
-		return (1);
 	for (i = 0; s[i] != '\0'; i++)
 		;
-	return (i);
+	return (i + 1);
 }
 /**
  * argstostr - concatenates all arguments of program

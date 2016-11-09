@@ -15,7 +15,7 @@ int _strlen(char *s)
 		return (1);
 	for (i = 0; s[i] != '\0'; i++)
 		;
-	return (i);
+	return (i + 1);
 }
 /**
  * str_concat - concatenate two strings

@@ -11,6 +11,8 @@ int _strlen(char *s)
 {
 	int i;
 
+	if (s[0] == '\0')
+		return (1);
 	for (i = 0; s[i] != '\0'; i++)
 		;
 	return (i);
@@ -35,7 +37,7 @@ char *str_concat(char *s1, char *s2)
 	if (dest == NULL)
 		return (NULL);
 
-	for (i = 0; s1[i]; i++)
+	for (i = 0; s1[i] != '\0'; i++)
 		dest[i] = s1[i];
 	for (j = 0; s2[j] != '\0'; j++)
 		dest[i + j] = s2[j];

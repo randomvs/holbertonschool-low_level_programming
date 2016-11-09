@@ -40,7 +40,7 @@ char *argstostr(int ac, char **av)
 		size += _strlen(av[i]);
 	}
 
-	dest = (char *)malloc((size) * sizeof(char));
+	dest = (char *)malloc((size + 1) * sizeof(char));
 
 	if (dest == NULL)
 		return (NULL);
@@ -55,5 +55,6 @@ char *argstostr(int ac, char **av)
 		dest[k] = '\n';
 		k++;
 	}
+	dest[k] = '\0';
 	return (dest);
 }

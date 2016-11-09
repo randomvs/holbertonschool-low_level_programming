@@ -16,11 +16,10 @@ int _strlen(char *s)
 	return (i);
 }
 /**
- * create_array - create array of size size and assign char c
- * @size: size of array
- * @c: char to assign
- * Description: creat array of size size and assign char c
- * Return: pointer to array, NULL if fail
+ * _strdup - duplicate string
+ * @str: source string
+ * Description: duplicate string
+ * Return: pointer to string, NULL if fail
  *
  **/
 char *_strdup(char *str)

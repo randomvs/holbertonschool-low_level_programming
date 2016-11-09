@@ -11,8 +11,6 @@ int _strlen(char *s)
 {
 	int i;
 
-	if (s[0] == '\0')
-		return (1);
 	for (i = 0; s[i] != '\0'; i++)
 		;
 	return (i + 1);
@@ -30,8 +28,19 @@ char *str_concat(char *s1, char *s2)
 	char *dest;
 	unsigned int i, j;
 
-	i = _strlen(s1);
-	j = _strlen(s2);
+	i = 0;
+	j = 0;
+
+	if (s1 != NULL)
+		i = _strlen(s1);
+	if (s2 != NULL)
+		j = _strlen(s2);
+
+	if (s1 == NULL && s2 == NULL)
+	{
+		dest = "\n";
+		return (dest);
+	}
 	dest = (char *)malloc((i + j - 1) * sizeof(char));
 
 	if (dest == NULL)

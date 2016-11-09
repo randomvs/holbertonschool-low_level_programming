@@ -28,18 +28,13 @@ char *str_concat(char *s1, char *s2)
 	char *dest;
 	unsigned int i, j;
 
-	i = 0;
-	j = 0;
+	if (s1 == NULL)
+		s1 = "";
+	i = _strlen(s1);
 
-	if (s1 != NULL)
-		i = _strlen(s1);
-	if (s2 != NULL)
-		j = _strlen(s2);
-	if (s1 == NULL && s2 == NULL)
-	{
-		dest = "";
-		return (dest);
-	}
+	if (s2 == NULL)
+		s2 = "";
+	j = _strlen(s2);
 
 	dest = (char *)malloc((i + j - 1) * sizeof(char));
 

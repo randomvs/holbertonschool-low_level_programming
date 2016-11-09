@@ -11,11 +11,9 @@ int _strlen(char *s)
 {
 	unsigned int i;
 
-	if (s[0] == '\0')
-		return (1);
 	for (i = 0; s[i] != '\0'; i++)
 		;
-	return (i);
+	return (i + 1);
 }
 /**
  * _strdup - duplicate string
@@ -29,7 +27,7 @@ char *_strdup(char *str)
 	unsigned int i;
 
 
-	if (dest == NULL || str == NULL)
+	if (dest == NULL)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
 		dest[i] = str[i];

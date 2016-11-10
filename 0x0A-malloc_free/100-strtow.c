@@ -2,61 +2,102 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strlen - returns the length of the string
- * @s: input string to count
- * Description: returns the length of a given string
- * Return: length of string as int
+ * findword - find position of next word
+ * @s: string
+ * Return: position of next word
  **/
-int _strlen(char *s)
+int findword(char *s)
 {
 	int i;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] == ' '; i++)
 		;
-	return (i + 1);
-}
-/**
- * _strlen - returns the length of the string
- * @s: input string to count
- * Description: returns the length of a given string
- * Return: length of string as int
- **/
-int word_count(char *s, int word, int count)
-{
-	if (s[0] == " ")
-		return word_count(++s, 0, count);
 
-	if (s[0] != " " && s[0] != '\0' && word = 1)
-	{
-		return (word_count(++s, 1, count));
-	}
-	else if (s[0] != " " && s[0] != '\0' && word = 0)
-	{
-		return (word_count(++s, 1, ++count))
-	}
-	else if (s[0] == '\0')
-		return (count);
+	return (i);
 }
 /**
- * argstostr - concatenates all arguments of program
- * @ac: number of arguments
- * @av: arguments, pointer to strings
- * Description: concatenate all args to one string, separated by \n
- * Return: pointer to string, NULL if fails
+ * wordlen - find length of word
+ * @s: string
+ * Return: length of word
+ **/
+int wordlen(char *s)
+{
+
+	int i;
+
+	for (i = 0; s[i] != '\0' && s[i] != ' '; i++)
+		;
+	return (i);
+}
+/**
+ * word_count - find number of words in string
+ * @s: string
+ * @word: switch used to track if currently in word
+ * Return: number of words in string
+ **/
+int word_count(char *s, int word)
+{
+	if (s[0] == ' ')
+		return (word_count(++s, 0));
+
+	else if (s[0] != ' ' && s[0] != '\0' && word == 1)
+	{
+		return (word_count(++s, 1));
+	}
+	else if (s[0] != ' ' && s[0] != '\0' && word == 0)
+	{
+		return (word_count(++s, 1) + 1);
+	}
+	return (0);
+}
+/**
+ * strtow - create an array of words from string
+ * @str: string
+ * Description: create array of words from string, last element should be null
+ * Return: pointer to strings, NULL if fails
  **/
 char **strtow(char *str)
 {
 	char **list;
-	unsigned int size, num_words;
+	int num_words, i, k, j;
 
-	if (str == NULL)
-		str = "";
+	if (str == NULL || word_count(str, 0) == 0)
+		return (NULL);
 
-	size = _strlen(str);
-	num_words = word_count(str);
+	j = 0;
+	num_words = word_count(str, 0);
 
+	printf("string has %d words\n", num_words);
 
-	printf("%s\n", str);
-	printf("%d\n", num_words
+	list = (char **)malloc((num_words + 1) * sizeof(char *));
 
+	printf("malloc complete\n");
+	printf("%p\n", list[i]);
+
+	if (list == NULL)
+		return (NULL);
+
+	printf("malloc success");
+
+	for (i = 0; i < num_words && str[j] != '\0'; i++)
+	{
+		j += findword(&str[j]);
+		list[i] = (char *)malloc((wordlen(str) + 1) * sizeof(char));
+
+		if (list[i] == NULL)
+		{
+			for (i = i - 1; i >= 0; i--)
+				free(list[i]);
+			free(list);
+			return (NULL);
+		}
+		for (k = 0; str[j] != ' ' || str[j] != '\0'; k++)
+		{
+			list[i][k] = str[j];
+			j++;
+		}
+		list[i][k] = '\0';
+	}
+	list[i] = NULL;
+	return (list);
 }

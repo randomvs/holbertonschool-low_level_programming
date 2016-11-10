@@ -69,7 +69,7 @@ char **strtow(char *str)
 	j = 0;
 	num_words = word_count(str, 0);
 
-	if (str == NULL || num_words == 0)
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
 	list = malloc((num_words + 1) * sizeof(char *));

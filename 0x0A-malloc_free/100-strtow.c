@@ -71,13 +71,11 @@ char **strtow(char *str)
 
 	if (str == NULL || num_words == 0)
 		return (NULL);
-
 	list = malloc((num_words + 1) * sizeof(char *));
-
 	if (list == NULL)
 		return (NULL);
 
-	for (i = 0; i < num_words && str[j] != '\0'; i++)
+	for (i = 0; i < num_words; i++)
 	{
 		j += findword(&str[j]);
 		list[i] = (char *)malloc((wordlen(str) + 1) * sizeof(char));

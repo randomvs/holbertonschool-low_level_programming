@@ -37,6 +37,10 @@ int wordlen(char *s)
  **/
 int word_count(char *s, int word)
 {
+
+	if (s == NULL || s[0] == '\0')
+	        return (0);
+
 	if (s[0] == ' ')
 		return (word_count(++s, 0));
 
@@ -48,6 +52,7 @@ int word_count(char *s, int word)
 	{
 		return (word_count(++s, 1) + 1);
 	}
+
 	return (0);
 }
 /**
@@ -61,11 +66,12 @@ char **strtow(char *str)
 	char **list;
 	int num_words, i, k, j;
 
-	if (str == NULL || word_count(str, 0) == 0)
-		return (NULL);
-
 	j = 0;
 	num_words = word_count(str, 0);
+
+	if (str == NULL || num_words == 0)
+		return (NULL);
+
 	list = malloc((num_words + 1) * sizeof(char *));
 
 	if (list == NULL)

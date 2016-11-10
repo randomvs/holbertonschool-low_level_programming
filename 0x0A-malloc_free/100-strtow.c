@@ -39,7 +39,7 @@ int word_count(char *s, int word)
 {
 
 	if (s == NULL || s[0] == '\0')
-	        return (0);
+		return (0);
 
 	if (s[0] == ' ')
 		return (word_count(++s, 0));

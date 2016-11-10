@@ -66,24 +66,15 @@ char **strtow(char *str)
 
 	j = 0;
 	num_words = word_count(str, 0);
-
-	printf("string has %d words\n", num_words);
-
-	list = (char **)malloc((num_words + 1) * sizeof(char *));
-
-	printf("malloc complete\n");
-	printf("%p\n", list[i]);
+	list = malloc((num_words + 1) * sizeof(char *));
 
 	if (list == NULL)
 		return (NULL);
-
-	printf("malloc success");
 
 	for (i = 0; i < num_words && str[j] != '\0'; i++)
 	{
 		j += findword(&str[j]);
 		list[i] = (char *)malloc((wordlen(str) + 1) * sizeof(char));
-
 		if (list[i] == NULL)
 		{
 			for (i = i - 1; i >= 0; i--)
@@ -91,7 +82,7 @@ char **strtow(char *str)
 			free(list);
 			return (NULL);
 		}
-		for (k = 0; str[j] != ' ' || str[j] != '\0'; k++)
+		for (k = 0; str[j] != ' ' && str[j] != '\0'; k++)
 		{
 			list[i][k] = str[j];
 			j++;

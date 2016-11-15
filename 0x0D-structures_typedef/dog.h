@@ -1,22 +1,36 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-struct Dog
+#ifndef DOG
+#define DOG
+/**
+ * struct dog - dog object
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: dog owner
+ **/
+struct dog
 {
 	char *name;
-	float *age;
+	float age;
 	char *owner;
 };
-
-struct Dog *new_dog(char *name, float *age, char *owner)
+/**
+ * struct dog new_dog - create dog in function
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: name of owner
+ * Return: dog, NULL if fails
+ **/
+struct dog *new_dog(char *name, float age, char *owner)
 {
-	struct Dog *dog;
+	struct dog *hobbes;
 
-	dog = malloc(sizeof(struct Dog));
-	if (dog == NULL)
+	hobbes = malloc(sizeof(struct dog));
+	if (hobbes == NULL)
 		return (NULL);
-	dog->name = name;
-	dog->age = age;
-	dog->owner = owner;
-	return dog;
+	hobbes->name = name;
+	hobbes->age = age;
+	hobbes->owner = owner;
+	return (hobbes);
 }
+#endif

@@ -1,3 +1,4 @@
-#ifndef ABS
-#define ABS(X) if(X<0)-X
+#ifndef ABSOLUTE
+#define ABSOLUTE
+#define ABS(X) ((X < 0) ? (-X) : (X))
 #endif

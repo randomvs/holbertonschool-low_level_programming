@@ -8,7 +8,12 @@
  **/
 void free_dog(dog_t *hobbes)
 {
-	free(hobbes->owner);
-	free(hobbes->name);
+	if (hobbes == NULL)
+		return;
+	if (hobbes->owner != NULL)
+		free(hobbes->owner);
+	if (hobbes->name != NULL)
+		free(hobbes->name);
+
 	free(hobbes);
 }

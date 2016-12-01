@@ -1,11 +1,9 @@
 #include "lists.h"
-#include <stdio.h>
 #include <stddef.h>
-#include <string.h>
 
 /**
  * free_listint - free a listint_t list
- * @head: address of head of list
+ * @head: address of head of linked list
  * Return: nothing
  **/
 void free_listint(listint_t *head)

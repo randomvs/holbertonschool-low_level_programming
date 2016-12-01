@@ -6,18 +6,19 @@
 /**
  * free_listint_safe - free a listint_t list, including loops
  * @head: address of head of list
- * Return: nothing
+ * Return: size of list freed
  **/
 size_t free_listint_safe(listint_t **h)
 {
 	listint_t *friend, start;
+	size_t i;
 
-	if (head == NULL)
-		return;
-	while (head != NULL && head != start)
+	start = head;
+	for (i = 0; head != NULL && head != start; i++)
 	{
 		friend = head->next;
 		free(head);
 		head = friend;
 	}
+	return (i);
 }

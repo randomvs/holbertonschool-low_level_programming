@@ -12,8 +12,6 @@ void free_listint(listint_t *head)
 {
 	listint_t *friend;
 
-	if (head == NULL)
-		return;
 	while (head != NULL)
 	{
 		friend = head->next;

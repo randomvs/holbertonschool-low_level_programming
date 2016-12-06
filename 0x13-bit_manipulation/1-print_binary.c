@@ -4,7 +4,7 @@
 
 /**
  * print_binary - print binary form of a number
- * @b: binary string
+ * @n: decimal to convert
  * Return: decimal as unsigned int
  */
 void print_binary(unsigned long int n)

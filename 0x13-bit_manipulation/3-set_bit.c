@@ -24,6 +24,8 @@ int binary_index(int y)
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
+	if (index >= sizeof(unsigned long int))
+		return (-1);
 	*n = *n | binary_index(index);
 	return (1);
 }

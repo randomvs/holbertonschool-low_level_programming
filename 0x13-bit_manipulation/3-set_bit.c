@@ -2,19 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/**
- * binary_index - returns 2 ^ y
- * @y: exponent value
- * Return: 2 ^ y or 0 if fail
- */
-int binary_index(int y)
-{
-	if (y == 0)
-		return (1);
-	else if (y == 1)
-		return (2);
-	return (2 * binary_index(y - 1));
-}
 
 /**
  * set_bit - changes a bit at index to 1
@@ -24,8 +11,9 @@ int binary_index(int y)
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	if (index > sizeof(unsigned long int))
+	if (index > sizeof(unsigned long int) * 8)
 		return (-1);
-	*n = *n | binary_index(index);
+
+	*n = *n | (1 << index);
 	return (1);
 }

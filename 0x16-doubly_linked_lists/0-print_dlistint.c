@@ -2,7 +2,11 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
-
+/**
+ * print_dlistint - Print all elements of a dlistint_t linked list
+ * @h: pointer to dlistint_t linked list
+ * Return: number of nodes in linked list
+ */
 size_t print_dlistint(const dlistint_t *h)
 {
 	size_t i;

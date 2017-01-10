@@ -38,7 +38,7 @@ int n)
 	for (i = 1; i < index; i++)
 	{
 		prior = prior->next;
-		if (prior->next == NULL && i + 1 != index)
+		if ((prior == NULL) || (prior->next == NULL && i + 1 != index))
 		{
 			free(new);
 			return (NULL);

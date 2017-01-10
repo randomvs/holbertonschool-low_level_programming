@@ -21,8 +21,9 @@ int n)
 	if (new == NULL)
 		return (NULL);
 	new->n = n;
-	while ((*head)->prev !=  NULL)
-		*head = (*head)->prev;
+	if (*head != NULL)
+		while ((*head)->prev !=  NULL)
+			*head = (*head)->prev;
 	if (index == 0)
 	{
 		new->prev = NULL;

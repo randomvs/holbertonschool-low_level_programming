@@ -16,7 +16,7 @@ int n)
 	unsigned int i;
 
 	if (head == NULL || (*head == NULL && index != 0))
-		return (0);
+		return (NULL);
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 		return (NULL);

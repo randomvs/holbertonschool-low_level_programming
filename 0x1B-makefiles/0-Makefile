@@ -1,7 +1,4 @@
 #first make file
 
 output: *.o
-	gcc -Wall -Werror -Wextra -pedantic *.c -o holberton
-
-main.o: *.c
-	gcc -Wall -Werror -Wextra -pedantic -c *.c
+	gcc main.c holberton.c -o holberton

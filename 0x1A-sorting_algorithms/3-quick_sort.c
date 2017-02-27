@@ -21,7 +21,7 @@ size_t partition(int *array, size_t size, int *og_array, size_t og_size)
 	{
 		do {
 			start++;
-		} while (array[start] > pivot);
+		} while (array[start] < pivot);
 		do {
 			end--;
 		} while (array[end] > pivot);
@@ -64,7 +64,6 @@ void quick(int *array, size_t size, int *og_array, size_t og_size)
  *@array: array of ints
  *@size: size of array
  */
-
 void quick_sort(int *array, size_t size)
 {
 	if (array == NULL || size <= 1)
